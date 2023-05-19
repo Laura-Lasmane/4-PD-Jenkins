@@ -11,6 +11,8 @@ pipeline {
                 }
             }
         }
+    }
+}
 
 def installPipDeps(){
     echo "Installing all required depdendencies.."
