@@ -88,7 +88,7 @@ def installPipDeps(){
 def deploy(String environment, int port){
     echo "Deployment to ${environment} has started.."
     git branch: 'main', poll: false, url: 'https://github.com/mtararujs/python-greetings'
-    bat "pm2 delete greetings-app-${environment} & set "errorlevel=0""
+    bat "pm2 delete greetings-app-${environment} & set \"errorlevel=0\""
 }
 
 def test(String environment){
