@@ -80,6 +80,9 @@ pipeline {
 
 def installPipDeps(){
     echo "Installing all required depdendencies.."
+    git branch: 'main', poll: false, url: 'https://github.com/mtararujs/python-greetings'
+    bat "dir"
+    bat "pip install -r requirements.txt"
 }
 
 def deploy(String environment, int port){
