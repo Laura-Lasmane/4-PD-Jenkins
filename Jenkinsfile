@@ -79,7 +79,7 @@ pipeline {
 }
 
 def installPipDeps(){
-    echo "Installing all required depdendencies.."
+    echo "Installing all required dependencies.."
     git branch: 'main', poll: false, url: 'https://github.com/mtararujs/python-greetings'
     bat "dir"
     bat "pip install -r requirements.txt"
